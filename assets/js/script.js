@@ -1,60 +1,117 @@
 
 var questions = [{
     question: "How do you write comments in Javascript?",
-    options: ["//", "/*", "<!---->", "None of Above"],
-    answers: "//"
+    ChoiceA: "//",
+    ChoiceB: "/*",
+    ChoiceC: "{}",
+    ChoiceD: "None of Above",
+    answer: "A"
     
 },
 {
     question: "Which one of these data types stores a single true or false value?",
-    options: ["string", "object", "float", "boolean"],
-    answers: "boolean"
+    ChoiceA: "string",
+    ChoiceB: "object",
+    ChoiceC: "float",
+    ChoiceD: "boolean",
+    answer: "D"
     
 },
 {
     question:"Which ones of these values is not considered false?",
-    options:["''", "null", "'0'", "0"],
-    answers:"'0'"
+    ChoiceA: "''",
+    ChoiceB: "null",
+    ChoiceC: "'0'",
+    ChoiceD: "0",
+    answer:"C"
     
 },
 {
     question:"What does CSS stand for?",
-    options:["Common Style Sheet", "Cascading Style Sheet", "Computer Style Sheet", "Colorful Style Sheet"],
-    answers: "Cascading Style Sheet"
+    ChoiceA: "Common Style Sheet",
+    ChoiceB: "Cascading Style Sheet",
+    ChoiceC: "Computer Style Sheet",
+    ChoiceD: "Colorful Style Sheet",
+    answer: "B"
     
 },
 {
     question:"What does HTMl stand for?",
-    options: ["Hyper Text Marketing Language", "Hyper Text Management Language", "Hyper Text Multiple Language", "Hyper Text Markup Language"],
-    answers: "Hyper Text Markup Language"
+    ChoiceA: "Hyper Text Marketing Language",
+    ChoiceB: "Hyper Text Management Language",
+    ChoiceC: "Hyper Text Multiple Language",
+    ChoiceD: "Hyper Text Markup Language",
+    answer: "D"
     
 }
 ]
 
-
-var timerEL = document.getElementById("time");
+var totalSeconds = 75;
+var timerEl = document.querySelector("#time");
 var startingButton = document.getElementById("starter-btn");
 var questionContainerEl = document.getElementById("questionBox");
 var introContainerEl = document.getElementById("startingPage");
+var nextQuestionButton = document.getElementById("next-btn");
+var questionText = document.getElementById("question");
+var currentQuestion = 0;
+var choicesEl = document.querySelector("#btn-section");
+var score = 0;
+var result = document.querySelector("#result")
 
-startingButton.addEventListener("click", startGame)
+var buttonA = document.querySelector("#A");
+var buttonB = document.querySelector("#B");
+var buttonC = document.querySelector("#C");
+var buttonD = document.querySelector("#D");
+
+
+
+
+
 
 function startGame() {
     console.log("Started the Game");
     startingButton.classList.add("hide");
     questionContainerEl.classList.remove("hide");
     introContainerEl.classList.add("hide");
+    setQuestion();
+    timerEl.value = totalSeconds;
 }
 
+function setQuestion() {
+    console.log("Question");
 
-function setNextQuestion() {
+    var questionDisplay = questions[currentQuestion];
+
+    for(let i = 0; i < questions.length; i++) {
+        questionText.innerHTML = questionDisplay.question;
+        buttonA.innerHTML = questionDisplay.ChoiceA;
+        buttonB.innerHTML = questionDisplay.ChoiceB;
+        buttonC.innerHTML = questionDisplay.ChoiceC;
+        buttonD.innerHTML = questionDisplay.ChoiceD;
+    }
+
 
 
 }
 
-function selectAnswer() {
+function checkChoice(choice) {
+
+    if(choice == questions[currentQuestion].answer) {
+        console.log("Correct");
+
+    } else {
+        console.log("Wrong");
+    }
+
+    if((currentQuestion) < (questions.length)) {
+        currentQuestion++;
+        setQuestion();
+    } else {
+
+    }
 
 
 }
 
-
+startingButton.addEventListener("click", startGame)
+choicesEl.addEventListener("click", setQuestion);
