@@ -9,20 +9,49 @@ body {
     background: white;
 }
 
-.container {
-    margin-top: 60px;
+header nav {
+
+    margin: 10px;
+    padding: 20px;
+
+}
+
+header nav a {
+    text-decoration: none;
+    color:darkviolet;
+
+}
+header nav div {
+    text-align: right;
+    margin-right: 40px;
+
 }
 
 .intro {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
     text-align: center;
-    margin: auto;
-    position: relative;
+    margin: 100px;
+    padding: 20px;
 }
 
-.start_btn {
+.intro h1 {
+    font-weight: bolder;
+}
+
+.intro p {
+    padding: 30px;
+}
+
+.start-btn {
+    outline: none;
+    border: none;
     font-size: 25px;
+    font-weight: 300;
     color: white;
     padding: 15px 30px;
-    border-radius: 15%;
+    border-radius: 5px;
     background: darkviolet;
+    cursor: pointer;
 }

@@ -9,17 +9,36 @@
     
 </head>
 <body>
+    <header>
+        <nav>
+            <a class="highScores" href="scores.html" id="">View HighScores</a>
+        </nav>
+    </header>
+
+    <div class ="timer" id ="time">Time: 0</div>
 
     <div class="container">
-        <div class="intro">
+        <div class="intro" id="startingPage">
             <h1>Coding Quiz Challenge</h1>
-            <p>Please try to answer all the code-related questions on this quiz. 
-                Each time you answer incorrectly time will be deducted.
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.
             </p>
-            <button class="start_btn">Start Quiz</button>
+            <button id="starter-btn" class="start-btn btn">Start Quiz</button>
         </div>
-        
     </div>
+
+    <div id="questionBox" class="hide">
+        <div class="question">Question</div>
+        <div class="answer-buttons" class="btn-section">
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 1</button>
+            <button class="btn">Answer 1</button>
+        </div>
+        <button id="next-btn" class="next-btn btn">Next</button>
+        <button id="end-quiz" class="ending-quiz btn hide">Submit</button>
+    </div>
+       
+    
     <script src="./assets/js/script.js"></script>
 </body>
 </html>
