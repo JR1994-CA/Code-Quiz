@@ -48,26 +48,37 @@ header nav a {
 }
 
 .intro p {
-
     padding: 30px;
-    
 }
 
-.start-btn {
+.start-btn, .next-btn, .ending-quiz {
     outline: none;
     border: none;
     font-size: 25px;
-    font-weight: 300;
+    font-weight: bold;
     color: white;
-    padding: 15px 30px;
+    padding: 10px 20px;
     border-radius: 5px;
     background: darkviolet;
     cursor: pointer;
 }
 
+.secondaryPages {
+    max-width: 80%;
+    width: 800px;
+    padding: 10px;
+    margin: 20px;
+}
+
+.hide {
+    display: none;
+}
 
 
-.btn-section {
-    display: flexbox;
 
+.answer-buttons {
+    display: grid;
+    gap:10px;
+    margin: 20px 0;
+        
 }

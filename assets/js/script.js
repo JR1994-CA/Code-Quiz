@@ -1,13 +1,4 @@
 
-var timerEL = document.querySelector("#time");
-var startingButton = document.querySelector("#starter");
-var startingIntro = document.querySelector("startingPage");
-
-
-
-
-
-
 var questions = [{
     question: "How do you write comments in Javascript?",
     options: ["//", "/*", "<!---->", "None of Above"],
@@ -37,11 +28,31 @@ var questions = [{
     options: ["Hyper Text Marketing Language", "Hyper Text Management Language", "Hyper Text Multiple Language", "Hyper Text Markup Language"],
     answers: "Hyper Text Markup Language"
     
-},
+}
+]
 
-function startQuiz() {
+
+var timerEL = document.getElementById("time");
+var startingButton = document.getElementById("starter-btn");
+var questionContainerEl = document.getElementById("questionBox");
+var introContainerEl = document.getElementById("startingPage");
+
+startingButton.addEventListener("click", startGame)
+
+function startGame() {
+    console.log("Started the Game");
+    startingButton.classList.add("hide");
+    questionContainerEl.classList.remove("hide");
+    introContainerEl.classList.add("hide");
+}
 
 
+function setNextQuestion() {
+
+
+}
+
+function selectAnswer() {
 
 
 }
