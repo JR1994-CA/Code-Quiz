@@ -1,12 +1,14 @@
 *{
-    margin: 0;
-    padding: 0;
+    
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 body {
+    margin: 0;
+    padding: 0;
     background: white;
+    
 }
 
 header nav {
@@ -21,17 +23,22 @@ header nav a {
     color:darkviolet;
 
 }
-header nav div {
+
+.timer {
     text-align: right;
     margin-right: 40px;
 
 }
 
-.intro {
+.container {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    align-items: center;
     text-align: center;
+}
+
+.intro {
     margin: 100px;
     padding: 20px;
 }
@@ -41,7 +48,9 @@ header nav div {
 }
 
 .intro p {
+
     padding: 30px;
+    
 }
 
 .start-btn {
@@ -54,4 +63,11 @@ header nav div {
     border-radius: 5px;
     background: darkviolet;
     cursor: pointer;
+}
+
+
+
+.btn-section {
+    display: flexbox;
+
 }
