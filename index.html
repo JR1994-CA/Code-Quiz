@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="./assets/css/style.css">
-    
+
 </head>
+
 <body>
-    <header>
-        <nav>
-            <a class="highScores" href="scores.html" id="">View HighScores</a>
-        </nav>
-    </header>
+    <a href="scores.html" id="">View HighScores</a>
+    <div id="currentTime" class="text-align right"></div>
 
-    <div class="timer">Time: <span id="time">0</span></div>
+    <div id="container">
 
-    <div class="container">
-        <div class="intro" id="startingPage">
+
+
+        <div id="introSection" class="start">
+
             <h1>Coding Quiz Challenge</h1>
-            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds.
+
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect
+                answers will penalize your score/time by ten seconds.
             </p>
-            <button id="starter-btn" class="start-btn btn">Start Quiz</button>
+
+            <button class="starter" id="starter-btn">Start Quiz</button>
         </div>
-        <div id="questionBox" class="secondaryPages hide">
-            <div id="question">Question</div>
+
+
+        <div id="questionBox" class="hide">
+            <div class="question-title"></div>
+            <div id="question"></div>
                 <div class="answer-buttons" id="btn-section">
                     <button class="btn" id="A" onclick="checkChoice('A')"></button>
                     <button class="btn" id="B" onclick="checkChoice('B')"></button>
@@ -36,12 +43,21 @@
                 <button id="end-quiz" class="ending-quiz btn hide">Submit</button>
             </div>
         </div>
-       
+
+        <div id="endPage" class="hide">
+            <h2>All Done!!</h2>
+            <p>Your final score is <span id="final-score"></span>.</p>
+            <p> Enter initials: <input type="text" id="initials" maxlength="3" placeholder="Enter initials here" />
+                <button id="submit">Submit</button>
+            </p>
+        </div>
     </div>
 
-    
-       
-    
-    <script src="./assets/js/script.js"></script>
+
+
+
+
+        <script src="./assets/js/script.js"></script>
 </body>
+
 </html>

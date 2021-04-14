@@ -3,66 +3,22 @@
     box-sizing: border-box;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
-
-body {
-    margin: 0;
-    padding: 0;
-    background: white;
-    
-}
-
-header nav {
-
-    margin: 10px;
-    padding: 20px;
-
-}
-
-header nav a {
-    text-decoration: none;
-    color:darkviolet;
-
-}
-
-.timer {
-    text-align: right;
-    margin-right: 40px;
-
-}
-
-.container {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    align-items: center;
-    text-align: center;
-}
-
-.intro {
-    margin: 100px;
-    padding: 20px;
-}
-
-.intro h1 {
-    font-weight: bolder;
-}
-
-.intro p {
-    padding: 30px;
-}
-
-.start-btn, .next-btn, .ending-quiz, .btn {
-    outline: none;
-    border: none;
-    font-size: 25px;
-    font-weight: bold;
+.starter {
+    background-color: purple;
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
     color: white;
-    padding: 10px 20px;
-    border-radius: 5px;
-    background: darkviolet;
-    cursor: pointer;
 }
 
+#container {
+    position: absolute;
+    left: 30%;
+    top: 20%;
+    width: 500px;
+    height: 500px;
+    border: 1px solid purple;
+}
 .secondaryPages {
     max-width: 80%;
     width: 800px;
@@ -74,15 +30,78 @@ header nav a {
     display: none;
 }
 
-
-.answer-buttons {
-    display: grid;
-    gap:20px;
-    margin: 20px 0;
-        
+#questionDiv {
+    margin: 20px;
 }
 
-.btn:hover {
-    background: fuchsia;
-    border-color: black;
+#currentTime {
+    float: right;
+}
+
+#goBack {
+    background-color: purple;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    left: 55%;
+    width: auto;
+    text-align: center;
+    text-decoration: none;
+}
+
+
+
+
+#clear {
+    background-color: purple;
+    position: relative;
+    padding: 10px;
+    font-size: 20px;
+    color: white;
+    top: 30%;
+    right: 5%;
+    text-align: center;
+}
+
+button {
+    border-radius: 8px;
+}
+
+textarea {
+    width: 90%;
+    margin: 20px;
+}
+
+#submit {
+    background-color: purple;
+    margin-left: 33%;
+    padding: 15px 32px;
+    font-size: 20px;
+    color: white;
+}
+
+input {
+    margin-bottom: 20px;
+    width: 50%;
+    border: 1px solid lightgray;
+}
+
+h1 {
+    text-align: center;
+}
+
+.btn {
+    background-color: purple;
+    margin-top: 10px;
+    padding: 5px 15px;
+    width: 80%;
+    font-size: 18px;
+    color: white;
+}
+
+#result {
+    margin-top: 20px;
+    border-top: 1px solid lightgray;
 }
