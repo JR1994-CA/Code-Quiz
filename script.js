@@ -6,7 +6,7 @@ const questions = [
         choiceB: "/*",
         choiceC: "{}",
         choiceD: "None of Above",
-        answer: "A"
+        answer: "//"
         
     },
     {
@@ -15,7 +15,7 @@ const questions = [
         choiceB: "object",
         choiceC: "float",
         choiceD: "boolean",
-        answer: "D"
+        answer: "boolean"
         
     },
     {
@@ -24,7 +24,7 @@ const questions = [
         choiceB: "null",
         choiceC: "'0'",
         choiceD: "0",
-        answer:"C"
+        answer:"'0'"
         
     },
     {
@@ -33,7 +33,7 @@ const questions = [
         choiceB: "Cascading Style Sheet",
         choiceC: "Computer Style Sheet",
         choiceD: "Colorful Style Sheet",
-        answer: "B"
+        answer: "Cascading Style Sheet"
         
     },
     {
@@ -42,7 +42,7 @@ const questions = [
         choiceB: "Hyper Text Management Language",
         choiceC: "Hyper Text Multiple Language",
         choiceD: "Hyper Text Markup Language",
-        answer: "D"
+        answer: "Hyper Text Markup Language"
         
     },
 ]
@@ -79,7 +79,7 @@ function questionEnder() {
     const inputScore = document.createElement("h1");
     const inputTag = document.createElement("input");
     const submitButton = document.createElement("button");
-    const playAgainButton = document.createElement("button");
+    
     score += timeClock;
     if (score <= 0 ) {
         score = 0;
@@ -129,7 +129,7 @@ function questionInit() {
 };
 // Local Storage - Need to verify functionality
 function saveScores(highScoreText) {
-    tempArray = JSON.parse(localStorage.getItem("scores"));
+    tempArray = JSON.parse(window.localStorage.getItem("scores"));
     if (tempArray === null) {
         scoreList.push(highScoreText);
         localStorage.setItem("scores", JSON.stringify(scoreList));
@@ -150,7 +150,7 @@ choiceB.hidden = true;
 choiceC.hidden = true;
 choiceD.hidden = true;
 document.getElementById("choiceA").addEventListener("click", function () {
-    if (questions[i].choice === questions[i].answer) {
+    if (questions[i].choiceA === questions[i].answer) {
         newMessage.textContent = "Well done!";
         score++;
     }
@@ -162,7 +162,7 @@ document.getElementById("choiceA").addEventListener("click", function () {
     questionInit();
 });
 document.getElementById("choiceB").addEventListener("click", function () {
-    if (questions[i].choice === questions[i].answer) {
+    if (questions[i].choiceB === questions[i].answer) {
         newMessage.textContent = "Well done!";
         score++;
     }
@@ -174,7 +174,7 @@ document.getElementById("choiceB").addEventListener("click", function () {
     questionInit();
 });
 document.getElementById("choiceC").addEventListener("click", function () {
-    if (questions[i].choice === questions[i].answer) {
+    if (questions[i].choiceC === questions[i].answer) {
         newMessage.textContent = "Well done!";
         score++;
     }
@@ -186,7 +186,7 @@ document.getElementById("choiceC").addEventListener("click", function () {
     questionInit();
 });
 document.getElementById("choiceD").addEventListener("click", function () {
-    if (questions[i].choice === questions[i].answer) {
+    if (questions[i].choiceD === questions[i].answer) {
         newMessage.textContent = "Well done!";
         score++;
     }
